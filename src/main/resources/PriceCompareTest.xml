@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Compare same product price in Amazon and Flipkart">
+    <test name="Select product in Amazon and Get price">
+        <classes>
+            <class name="in.zestmoney.onlineshopping.tests.AmazonTests">
+                <methods>
+                    <include name="goToAmazonSiteSearchProduct"/>
+                    <include name="selectProduct"/>
+                    <include name="getPriceOfTheProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Go to Flipkart and Get price of the product">
+        <classes>
+            <class name="in.zestmoney.onlineshopping.tests.FlipkartTests">
+                <methods>
+                    <include name="goToFlipkartSiteAndSearchProduct"/>
+                    <include name="selectProduct"/>
+                    <include name="getPriceOfTheProductFlipkart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Compare prices">
+        <classes>
+            <class name="in.zestmoney.onlineshopping.tests.CompareProductTests">
+                <methods>
+                    <include name="comparePrice"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
